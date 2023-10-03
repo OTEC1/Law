@@ -22,8 +22,11 @@ const Professional = () => {
 
 const Container = styled.div`
 width:100%;
-height:70vh;
+height:auto;
 padding-top:250px;
+@media(max-width:980px){
+padding-top:200px;
+}
 `;
 
 
@@ -40,6 +43,11 @@ border-radius:5px;
 margin-top:20px;
 margin-bottom:50px;
 text-align:center;
+
+@media(max-width:980px){
+width:80%; 
+font-size:15px;
+}
 `;
 
 
@@ -50,6 +58,9 @@ margin: 0 auto;
 display:flex;
 flex-flow:row;
 justify-content:center;
+@media(max-width:980px){
+flex-wrap:wrap;
+}
 `;
 
 const ImgBox = styled.div`

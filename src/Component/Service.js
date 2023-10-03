@@ -59,6 +59,12 @@ img{
 width:150px;
 height:150px;
 }
+
+@media(max-width:980px){
+flex-flow:column;
+text-align:center;
+padding:15px;
+}
 `;
 
 

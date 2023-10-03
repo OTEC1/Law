@@ -30,7 +30,11 @@ const Misson = () => {
   )
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+@media(max-width:980px){
+overflow-x:hidden;
+}
+`;
 
 
 const Head = styled.div`
@@ -53,6 +57,12 @@ margin-bottom:50px;
 img{
 width:150px;
 height:150px;
+}
+
+@media(max-width:980px){
+flex-flow:column;
+text-align:center;
+padding:15px;
 }
 `;
 
@@ -78,12 +88,25 @@ height:50%;
 font-size:15px; 
 margin-left:15px;
 }
+
+@media(max-width:980px){
+flex-flow:column;
+text-align:left;
+padding:15px;
+img{
+width:100%;
+}
+h5{
+margin-left:0px;
+width:100%;
+}
+}
 `;
 
 
 const Page2 = styled(Page)`
 flex-flow:column;
-width:100%;
+width:90%;
 `;
 
 export default Misson

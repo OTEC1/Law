@@ -19,6 +19,12 @@ const  People = () => {
 
 const Container = styled.div`
 text-align:center;
+@media(max-width:980px){
+display:flex; 
+flex-flow:column;
+justify-content:center;
+margin:10px;
+}
 `;
 
 
@@ -46,6 +52,16 @@ height: 0.5px;
 background-color: #fff;
 border: none;
 margin-top:10px;
+}
+
+@media(max-width:980px){
+width:92%;
+height:auto;
+text-align:center;
+padding:5px;
+margin:10px;
+font-size:13px;
+margin-bottom:50px;
 }
 
 `;

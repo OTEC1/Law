@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 
 const  OurOffice = () => {
-  const [list, setList] = useState(["./assets/IMG-20230927-WA0035.jpg", "./assets/IMG-20230927-WA0035.jpg", "./assets/IMG-20230927-WA0013.jpg",
+  const [list, setList] = useState(["./assets/IMG-20230927-WA0035.jpg", "./assets/IMG-20230927-WA0013.jpg",
                                     "./assets/IMG-20230927-WA0020.jpg","./assets/IMG-20230927-WA0021.jpg","./assets/IMG-20230927-WA0022.jpg",
                                      "./assets/IMG-20230927-WA0026.jpg","./assets/IMG-20230927-WA0027.jpg","./assets/IMG-20230927-WA0028.jpg",
                                      "./assets/IMG-20230927-WA0029.jpg", "./assets/IMG-20230927-WA0035.jpg",
@@ -53,13 +53,18 @@ font-family: "Poppins", sans-serif;
 
 const Box = styled.div`
 width:80%; 
-height:100vh;
+height:auto;
 margin: 0 auto;
 display:flex;
 justify-content: space-between;
 align-items:center;
 flex-flow:row;
 flex-wrap: wrap;
+@media(max-width:980px){
+width:100%;
+justify-content: center;
+align-items:center;
+}
 `;
 
 
@@ -78,6 +83,8 @@ const InnerBox = styled.div`
 img{
 width:200px;
 height:200px;
+}
+@media(max-width:980px){
 }
 `;
 

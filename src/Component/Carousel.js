@@ -2,14 +2,20 @@ import React, { useState } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const Carousels = () => {
   
   const [list, setList] = useState(["cross_section2.jpg","lib1.jpg","principal2.jpg"]);   
+  const history = useNavigate();
+
+  const SendPage = (v) => {
+    console.log("Open");
+  }
 
   return (
     <Container>
-           <Page>
+           <Page  onClick={(e) => SendPage("/")}>
               <h3>Benson Enikuomehin & Co</h3>
               <h5>Shalom Chambers</h5>
             </Page>
@@ -29,6 +35,14 @@ const Container = styled.div`
 img{
 height:100vh;
 object-fit:cover;
+}
+@media(max-width:980px){
+width:100%;
+img{
+width:70%;
+height:auto;
+object-fit:contain;
+}
 }
 `;
 
@@ -50,6 +64,13 @@ text-align:center;
 h3{
 font-weight:900;
 font-size:30px;
+}
+
+@media(max-width:980px){
+top:40%;
+h3{
+font-size:11px;
+}
 }
 `;
 

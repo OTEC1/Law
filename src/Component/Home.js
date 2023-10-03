@@ -22,6 +22,9 @@ const Home = () =>{
 const Container = styled.div`
 width:100%; 
 height:auto;
+@media(max-width:980px){
+overflow-x:hidden;
+}
 `;
 
 export default Home

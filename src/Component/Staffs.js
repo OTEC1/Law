@@ -58,6 +58,10 @@ margin: 0 auto;
 display:flex;
 flex-flow:row;
 justify-content:center;
+@media(max-width:980px){
+width:100%;
+flex-flow:column;
+}
 `;
 
 const ImgBox = styled.div`
@@ -79,6 +83,12 @@ p{
 padding:5px;
 font-size:12px;
 }
+
+@media(max-width:980px){
+width:90%;
+flex-flow:column;
+}
+
 `;
 
 

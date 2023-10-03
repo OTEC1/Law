@@ -24,6 +24,7 @@ const  Bio = () => {
                 </p>
             </Write>
         </Up>
+
         <Down>
             <ul>
                 <li>Legal Adviser to the Ondo State Oil Mineral Advisory Committee (1995 - 1997)</li>
@@ -35,6 +36,7 @@ const  Bio = () => {
                 <li>Commissioner Representing Ondo State on the board of Niger Delta Development Commission ( 2010 - )</li>
             </ul>
         </Down>
+
         
         <Last>
             <Circle>
@@ -62,7 +64,10 @@ const  Bio = () => {
 
 const Container = styled.div`
 width:100%; 
-height:100vh;
+height:auto;
+@media(max-width:980px){
+}
+
 `;
 
 
@@ -74,6 +79,10 @@ flex-flow:row;
 margin-left:auto;
 margin-right:auto;
 margin-top:100px;
+@media(max-width:980px){
+flex-flow:column;
+font-size:12px;
+}
 `;
 
 
@@ -89,6 +98,10 @@ object-fit:contain;
 const Write = styled.div`
 text-align:left;
 width:70%; 
+@media(max-width:980px){
+width:90%;
+margin-top:20px;
+}
 `;
 
 
@@ -102,6 +115,12 @@ margin-bottom:10px;
 ul li{
 text-align:left;
 }
+@media(max-width:980px){
+height:auto;
+margin-top:350px;
+width:90%; 
+font-size:12px;
+}
 `;
 
 const Last = styled.div`
@@ -114,6 +133,13 @@ justify-content:center;
 align-items:center;
 flex-flow:row;
 box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+@media(max-width:980px){
+width:70%;
+height:auto;
+margin-top:50px;
+font-size:12px;
+flex-flow:column;
+}
 `;
 
 
@@ -125,6 +151,9 @@ align-items:center;
 border-radius:100%; 
 border: 1px solid #000;
 padding:20px;
+@media(max-width:980px){
+margin-bottom:15px;
+}
 `;
 
 const DownPage = styled.div`

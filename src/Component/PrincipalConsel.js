@@ -2,9 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const  PrincipalConsel = () => {
+
+    const history = useNavigate();
+
+
+    const push = (v) => {
+         window.scrollTo(0,0);
+        history(v);
+    }
+
 
     const images = [
         "./assets/benson1.jpg",
@@ -28,9 +37,9 @@ const  PrincipalConsel = () => {
                 <PageWite>
                     The Principal Counsel Benson Enikuomehin Esq. holds an LL.B (Hons.) Second Class (Lower Division) from the University of Benin, Edo State, 
                     Nigeria in 1993/94. He had a brief pupilage at the Law office of Tayo Oyetibo & Co., 
-                    Lagos, Nigeria between 1994 and 1995 
+                    Lagos, Nigeria between 1994 and 1995  
                 </PageWite>
-                <Link  to={"/details"}>Details</Link>
+                <h5  onClick={(e) => push("/bio")}>Details</h5>
             </Write>
         </Box>
     </Container>
@@ -55,6 +64,13 @@ display:flex;
 flex-flow:row;
 font-family: "Poppins", sans-serif;
 box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+@media(max-width:980px){
+flex-flow:column;
+height:auto;
+padding:18px;
+margin: 15px;
+font-size:14px;
+}
 `;
 
 
@@ -63,6 +79,9 @@ width:50%;
 height:100%; 
 img{
 object-fit:contain;
+}
+@media(max-width:980px){
+width:100%; 
 }
 `;
 
@@ -74,6 +93,10 @@ align-items:left;
 flex-flow:column;
 width:80%; 
 text-align:left;
+h5{
+color:navy;
+cursor:pointer;
+}
 `;
 
 
